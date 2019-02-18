@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
 
 const photos = [
-    { src: '../demo_images/One-Does-Not-Simply.jpg' },
-    { src: '../demo_images/Socially-Awesome-Awkward-Penguin.jpg' },
-    { src: '../demo_images/fry.jpeg' },
-    { src: '../demo_images/ned.jpg' },
-    { src: '../demo_images/victory-baby.jpg' },
+    { src: '../demo_images/vict-baby.png' },
+    { src: '../demo_images/ned.jpeg' },
+    { src: '../demo_images/devilgirl.jpg' },
+    { src: '../demo_images/trump.jpg' },
+    { src: '../demo_images/one-does-not.jpg' },
+    { src: '../demo_images/dank.png' },
+    { src: '../demo_images/boy.png' },
+    { src: '../demo_images/sad.png' },
+    { src: '../demo_images/wolf.png' },
+    { src: '../demo_images/fry.jpg' },
+    { src: '../demo_images/jobs.jpg' },
+    { src: '../demo_images/phone.jpg' },
+    { src: '../demo_images/oldie.png' },
+    { src: '../demo_images/image.png' },
+    { src: '../demo_images/doubt.png' },
+    { src: '../demo_images/crying.png' },
+    { src: '../demo_images/sponge.png' },
+    { src: '../demo_images/dog.png' },
+    { src: '../demo_images/frust.png' },
+    { src: '../demo_images/web.png' },
+    { src: '../demo_images/penguin.png' }
 ];
 
 const initialState = {
