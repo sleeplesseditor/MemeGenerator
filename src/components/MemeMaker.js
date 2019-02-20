@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, ModalHeader, ModalBody, FormGroup, Label, NavbarBrand } from 'reactstrap';
+import { SimpleShareButtons } from "react-simple-share";
 
 const photos = [
     { src: '/demo_images/vict-baby.png' },
@@ -205,8 +206,11 @@ class MemeMaker extends Component {
                     ))}
                 </div>
                 </div>
-                <Modal className="meme-gen-modal" isOpen={this.state.modalIsOpen}>
-                <ModalHeader toggle={this.toggle}>Make-a-Meme</ModalHeader>
+                <Modal 
+                    className="meme-gen-modal" 
+                    isOpen={this.state.modalIsOpen}
+                >
+                <ModalHeader toggle={this.toggle}>MemeGenerator</ModalHeader>
                 <ModalBody>
                     <svg
                     width={newWidth}
@@ -245,34 +249,44 @@ class MemeMaker extends Component {
                     </text>
                     </svg>
                     <div className="meme-form">
-                    <FormGroup>
-                        <Label for="toptext">Top Text</Label>
-                        <input 
-                            className="form-control" 
-                            type="text" 
-                            name="toptext" 
-                            id="toptext" 
-                            placeholder="Add text to the top" 
-                            onChange={this.changeText} 
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="bottomtext">Bottom Text</Label>
-                        <input 
-                            className="form-control" 
-                            type="text" 
-                            name="bottomtext" 
-                            id="bottomtext" 
-                            placeholder="Add text to the bottom" 
-                            onChange={this.changeText} 
-                        />
-                    </FormGroup>
-                    <button 
-                        onClick={() => this.convertSvgToImage()} 
-                        className="btn btn-primary"
-                    >
-                        Download Meme
-                    </button>
+                        <FormGroup>
+                            <Label for="toptext">Top Text</Label>
+                            <input 
+                                className="form-control" 
+                                type="text" 
+                                name="toptext" 
+                                id="toptext" 
+                                placeholder="Add text to the top" 
+                                onChange={this.changeText} 
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="bottomtext">Bottom Text</Label>
+                            <input 
+                                className="form-control" 
+                                type="text" 
+                                name="bottomtext" 
+                                id="bottomtext" 
+                                placeholder="Add text to the bottom" 
+                                onChange={this.changeText} 
+                            />
+                        </FormGroup>
+                        <button 
+                            onClick={() => this.convertSvgToImage()} 
+                            className="btn btn-primary"
+                        >
+                            Download Meme
+                        </button>
+                        <br />
+                        <div className="share-container">
+                            <SimpleShareButtons
+                                whitelist={
+                                    ["Facebook", "Twitter", "Tumblr", "Pinterest", "Reddit"]
+                                }
+                                size="40px"
+                                media={() => this.convertSvgToImage()}
+                            />
+                        </div>
                     </div>
                 </ModalBody>
                 </Modal>

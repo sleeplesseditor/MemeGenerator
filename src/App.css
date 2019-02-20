@@ -44,6 +44,7 @@ html, body {
 
 .meme-gen-modal {
   max-width: fit-content;
+  font-family: "Lato", sans-serif;
 }
 
 .modal-body {
@@ -148,4 +149,10 @@ html, body {
   color: #fff;
   letter-spacing: 1px;
   background: linear-gradient(to left, rgb(51, 51, 51), rgba(51, 51, 51, 0.81));
+}
+
+.share-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
