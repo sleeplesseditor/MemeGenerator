@@ -213,12 +213,13 @@ class MemeMaker extends Component {
                 <ModalHeader toggle={this.toggle}>MemeGenerator</ModalHeader>
                 <ModalBody>
                     <svg
-                    width={newWidth}
-                    id="svg_ref"
-                    height={newHeight}
-                    ref={el => { this.svgRef = el }}
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink">
+                        width={newWidth}
+                        id="svg_ref"
+                        height={newHeight}
+                        ref={el => { this.svgRef = el }}
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
                     <image
                         ref={el => { this.imageRef = el }}
                         xlinkHref={this.state.currentImagebase64}
@@ -273,7 +274,7 @@ class MemeMaker extends Component {
                         </FormGroup>
                         <button 
                             onClick={() => this.convertSvgToImage()} 
-                            className="btn btn-primary"
+                            className="btn btn-primary download-button"
                         >
                             Download Meme
                         </button>
@@ -283,8 +284,9 @@ class MemeMaker extends Component {
                                 whitelist={
                                     ["Facebook", "Twitter", "Tumblr", "Pinterest", "Reddit"]
                                 }
+                                url="http://localhost:3000"
                                 size="40px"
-                                media={() => this.convertSvgToImage()}
+                                media={this.state.currentImagebase64}
                             />
                         </div>
                     </div>

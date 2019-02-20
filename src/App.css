@@ -17,6 +17,7 @@ html, body {
   border: none !important;
   outline: none !important;
   width: 100%;
+  font-weight: 700;
 }
 
 .form-control:focus {
@@ -24,7 +25,7 @@ html, body {
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-  background: #666 !important;
+  background: rgb(255, 0, 0) !important;
   outline: none !important;
   border: none !important;
 }
@@ -32,14 +33,14 @@ html, body {
 .navbar-brand {
   display: block;
   text-align: center;
-  color: #FFF;
+  color: #fff;
   margin: 0px 0px 20px 0px;
   padding-bottom: 15px;
   border-bottom: 1px solid #fff;
 }
 
 .navbar-brand:focus, .navbar-brand:hover, .navbar-brand:active {
-  color: #FFF;
+  color: #fff;
 }
 
 .meme-gen-modal {
